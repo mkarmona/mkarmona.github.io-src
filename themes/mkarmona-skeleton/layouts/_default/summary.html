@@ -1,15 +1,17 @@
-{{ $baseurl := .Site.BaseURL }}
-<h5 class="title"><a href="{{ .RelPermalink }}" rel="prefetch">{{ .Title }}</a>{{ with .Description }} <small>{{ . }}</small>{{ end }}</h5>
-{{ if isset .Params "excerpt" }}
-<p class="text-muted">{{ .Params.excerpt }}</p>
-{{ else }}
-<p>{{ .Summary }}</p>
-{{ end }}
-<footer class="text-muted">
-  <div class="meta">
-    <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time> &#8776; {{ .ReadingTime }} mins
+<div class="post-article">
+  {{ $baseurl := .Site.BaseURL }}
+  <h5 class="post-title"><a href="{{ .RelPermalink }}" rel="prefetch">{{ .Title }}</a>{{ with .Description }} <small>{{ . }}</small>{{ end }}</h5>
+  {{ if isset .Params "excerpt" }}
+  <p class="post-excerpt">{{ .Params.excerpt }}</p>
+  {{ else }}
+  <p>{{ .Summary }}</p>
+  {{ end }}
+  <div class="post-footer">
+    <div class="meta">
+      <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time> &#8776; {{ .ReadingTime }} mins
+    </div>
+    <div class="meta">
+      {{ if isset .Params "tags" }} with {{ range .Params.tags }}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }} </a>{{ end }}{{ end }}
+    </div>
   </div>
-  <div class="meta">
-    {{ if isset .Params "tags" }} with {{ range .Params.tags }}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }} </a>{{ end }}{{ end }}
-  </div>
-</footer>
+</div>

@@ -39,18 +39,15 @@ He de reconocer que es algo subjetivo decir que, en mi caso, aplicar *kiss* es u
 
 Solo tengo que bajar el código, tanto para desarrollar como para poner en producción y ejecutar un par de comandos
 ``` sh
-hg clone https://bitbucket.org/linecode30/website
-cd website
+hg clone https://github.com/mkarmona/mkarmona.github.io-src
+cd mkarmona.github.io-src
 rm -Rf public/
 hugo server -v true -D true --verboseLog=true -b localhost -p 9000 --watch &
 ```
 
 Y ejecutar esto en el caso de generar el contenido para producción
-``` c++
-int main(int args, char **argv) {
-  std::cout << "hello world" << std::endl;
-  return 0;
-}
+``` sh
+./prod.sh
 ```
 
 El contenido generado que hay en `public` es lo único que tengo que subir, mediante ftp o rsync[^11], a mi proveedor de hosting.

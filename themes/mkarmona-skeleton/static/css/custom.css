@@ -1,4 +1,5 @@
 footer {
+    margin-top: 2.5rem;
     font-size: 80%;
     color: #666;
 }
@@ -6,4 +7,36 @@ footer {
 small {
     font-family: "Roboto";
     font-size: 60%;
+    color: #666;
+}
+
+.post-title {
+    margin-bottom: 0.5rem;
+}
+
+.post-excerpt {
+    margin-bottom: 0.5rem;
+}
+
+.post-footer {
+    font-size: 80%;
+    color: #666;
+}
+
+.post-article {
+    margin-bottom: 2rem;
+}
+
+.footnotes {
+    font-family: "Roboto Condensed";
+    font-size: 80%;
+    color: #666;
+}
+
+blockquote {
+    font-style: italic;
+}
+
+li {
+    margin-bottom: 0.5rem;
 }
