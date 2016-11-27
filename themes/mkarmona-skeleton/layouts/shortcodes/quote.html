@@ -1,0 +1,4 @@
+<blockquote style="margin:1.5em 0;border-left: 5px solid #999">
+	{{ .Inner }}
+	<footer>{{ with .Get 1 }}{{ . }}{{ end }} <cite title="{{ .Get 0 }}">{{ .Get 0 }}</cite></footer>
+</blockquote>

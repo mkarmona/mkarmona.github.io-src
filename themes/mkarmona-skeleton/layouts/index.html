@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 10%">
+        <h1>{{ .Site.Params.inc.title}}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="four columns">
+        <div>
+          <img class="u-max-full-width" alt="" src="images/header.png"/>
+        </div>
+      </div>
+      <div class="eight columns">
+        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the link.</p>
+
+      </div>
+    </div>
+
+	  <div class="row">
+		  <div class="twelve columns" style="margin-top: 10%">
+					  <h3>Latest posts</h3>
+					  <p>
+              Writing tech posts in spanish could be my little grain of sand in an ever-growing virtual place led by the ubiquitous english language
+            </p>
+				  <div class="row">
+					  <div class="twelve columns">
+						  {{ range first 1 (where .Data.Pages.ByDate.Reverse "Section" "post") }}
+						  {{ .Render "summary" }}
+						  {{ end }}
+					  </div>
+				  </div>
+          <div class="row">
+            <div class="twelve columns">
+              <h4><a href="/post/">Blog archive...</a></h4>
+            </div>
+          </div>
+		  </div>
+	  </div>
+
+{{ partial "footer.html" . }}

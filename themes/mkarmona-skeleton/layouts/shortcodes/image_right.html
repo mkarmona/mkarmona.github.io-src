@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="col-xs-12 col-sm-5">
+		{{ .Inner }}
+	</div>
+	<div class="col-xs-12 col-sm-7">
+		<figure class="block-image text-center" style="margin-top:0">
+			<img src="{{ .Get 0 }}" class="img-responsive"/>{{ if .Get 1 }}<figcaption class="text-muted">{{ .Get 1 }}</figcaption>{{ end }}
+		</figure>
+	</div>
+</div>

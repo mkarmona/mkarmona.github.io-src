@@ -1,0 +1,35 @@
+---
+
+baseurl:            http://mkarmona.space/
+pygmentsuseclasses: false
+pygmentsstyle:      "default"
+theme:              mkarmona-skeleton
+languagecode: "en-gb"
+builddrafts: false
+metadataformat: yaml
+
+taxonomies:
+    tag: "tags"
+    series: "series"
+
+params:
+  author:
+      name: "Miguel C."
+      link: "https://www.linkedin.com/in/mkarmona"
+      bio: "Some dude."
+  inc:
+    # Blog Information
+    title:        "Miguel C."
+    # subtitle:     "a technological advisory company. We provide technical & development support services for both, research institutions and companies."
+    subtitle:     "subtitle"
+    cover_image:  blog-cover.jpg
+    logo:         "/images/logo-small.png"
+    
+    url:          /
+#    facebook:     
+#    github:       
+    about_link:   /page/about/
+    
+   # Analytics     
+    analytics:
+#      googleid: UA-36426471-1

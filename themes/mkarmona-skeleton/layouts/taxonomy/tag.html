@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+	<div class="row">
+		<div class="twelve columns" style="margin-top: 10%">
+			<article>
+				<header><h1>Archive with tag {{ upper .Title }}</h1></header>
+				{{ range .Data.Pages.ByDate.Reverse }}
+				{{ .Render "title" }}
+				{{ end }}
+			</article>
+		</div>
+	</div>
+{{ partial "footer.html" . }}
