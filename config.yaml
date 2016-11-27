@@ -19,7 +19,7 @@ params:
       bio: "Some dude."
   inc:
     # Blog Information
-    title:        "Miguel C."
+    title:        "Miguel Carmona"
     # subtitle:     "a technological advisory company. We provide technical & development support services for both, research institutions and companies."
     subtitle:     "subtitle"
     cover_image:  blog-cover.jpg
