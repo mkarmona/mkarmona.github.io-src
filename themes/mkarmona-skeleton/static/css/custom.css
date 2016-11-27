@@ -40,3 +40,8 @@ blockquote {
 li {
     margin-bottom: 0.5rem;
 }
+
+h1.page-header a,
+h1 a {
+    text-decoration: none;
+}
