@@ -29,7 +29,10 @@ params:
 #    facebook:     
 #    github:       
     about_link:   /page/about/
-    
+    disqus:
+      # Set a shortname to enable disqus comments
+      shortname:  "mkarmona-space"
+  
    # Analytics     
     analytics:
 #      googleid: UA-36426471-1

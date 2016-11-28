@@ -5,18 +5,18 @@
 					<h1 class="page-header">{{ .Title }} <small>&#8776; {{ .ReadingTime }} mins</small> <a href="/"><b>¶</b></a></h1>
 					<h2>{{ .Description }}</h2>
 					{{ .Content }}
-					<div class="post-footer">By <a rel="author" href="https://plus.google.com/{{ .Site.Params.author.gplus }}/posts" title="{{ .Site.Params.author.name }}" target="_blank">{{ .Site.Params.author.name }}</a> &mdash; <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></div>
+					<div class="post-footer">By <a rel="author" href="{{ .Site.Params.author.link }}" title="{{ .Site.Params.author.name }}" target="_blank">{{ .Site.Params.author.name }}</a> &mdash; <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }}</time></div>
 					<div class="post-footer">
 						{{ if isset .Params "tags" }} with {{ range .Params.tags }}<a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }} </a>{{ end }}{{ end }}
 					</div>
 		</div>
 	</div>
 
-	<!-- <div class="row">
-		   <div class="twelve columns">
-			 {{ with .Site.Params.inc.disqus.shortname }}
-			 {{ partial "_disqus.html" . }}
-			 {{ end }}
-		   </div>
-	     </div> -->
+	<div class="row" style="margin-top: 0.5rem;">
+		<div class="twelve columns">
+			{{ with .Site.Params.inc.disqus.shortname }}
+			{{ partial "_disqus.html" . }}
+			{{ end }}
+		</div>
+	</div>
 {{ partial "footer.html" . }}
