@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="twelve columns" style="margin-top: 10%">
 			<article>
-				<header><h1>Archive with tag {{ upper .Title }} <a href="/"><b>¶</b></a></h1></header>
+				<header><h1>Archive with tag <small>{{ lower .Title }}</small> <a href="/"><b>¶</b></a></h1></header>
 				{{ range .Data.Pages.ByDate.Reverse }}
 				{{ .Render "title" }}
 				{{ end }}
