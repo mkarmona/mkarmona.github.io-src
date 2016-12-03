@@ -5,8 +5,8 @@ footer {
 }
 
 small {
-    font-family: "Roboto";
-    font-size: 60%;
+    font-family: inherit;
+    font-size: 70%;
     color: #666;
 }
 
@@ -28,7 +28,7 @@ small {
 }
 
 .footnotes {
-    font-family: "Roboto Condensed";
+    font-family: "Noto Sans";
     font-size: 80%;
     color: #666;
 }
